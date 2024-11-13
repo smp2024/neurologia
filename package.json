@@ -1,8 +1,8 @@
 {
-  "name": "Adryo",
+  "name": "Neurologia",
   "version": "0.0.1",
-  "author": "AdryoInmosystem",
-  "homepage": "https://adryo.com.mx",
+  "author": "SMP",
+  "homepage": "",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

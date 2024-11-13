@@ -77,13 +77,10 @@ export class InicioPage {
     const nombreMes = meses[fechaActual.getMonth()];
     this.nombreMes = nombreMes;
 
-    this.usuarioService.getUserData(id).subscribe(resp => {
-      this.adviser = resp[0];
-      this.events = resp[0].events;
-
-    });
+     
+    
     // eslint-disable-next-line @typescript-eslint/naming-convention
-    this.us2();
+    
   }
   async us2() {
     const storage = await this.storage.create();
