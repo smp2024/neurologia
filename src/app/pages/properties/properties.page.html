@@ -1,0 +1,80 @@
+<app-header titulo="Propiedades"></app-header>
+
+
+<!-- -------------------------- Busqueda avanzada -------------------------- -->
+<div class="col-12 text-center" style="  max-height: 70px; background-color: #fff; color: black; padding: 0 40px;">
+  <h5 class="find_advance"  routerLink="/search-client" style="color: #fff; "><i class="far fa-search" style="margin-right: 15px;"></i>  Búsqueda avanzada</h5>
+</div>
+<!-- ----------------------------------------------------------------------- -->
+
+<!-- -------------------------- Filtro etapa -------------------------- -->
+
+<!-- <div class="col-12 text-center cont_filter">
+  <ion-list>
+    <ion-item>
+      <ion-select aria-label="etapa" interface="action-sheet" placeholder="Selecciona una etapa" class="find_advance_" >
+        <ion-select-option value="{{desarrollo.id}}"  *ngFor="let desarrollo of desarrollos"  (click)="verInmueble(desarrollo.id)">{{desarrollo.desarrollo}}</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</div> -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+<ion-content>
+
+  <div id="Propierties" class="row" style="background-color: #fff; color: black; padding: 10px 30px;" >
+
+    <div class="col-12 card-date text-center mt-4 cont-card-event" routerLink="/view-propertie" *ngFor="let inmueble of inmuebles">
+
+      <div class=" card-image" style="background-image: url({{inmueble.portada}});" >
+        <div class="">
+          <p class="status">{{inmueble.etapa}}</p>
+        </div>
+      </div>
+      <div class=" card-name">
+        <p>{{inmueble.nombre}}</p>
+      </div>
+      <div class=" card-price">
+        <p>{{inmueble.precio}}</p>
+      </div>
+      <div class="row card-amenidad mt-2">
+        <div class="col-3 extra-propertie ">  <img  alt="" class="extra-img full"><p class="info-amenidad">{{inmueble.metros}}</p> </div>
+        <div class="col-3 extra-propertie ">  <img  alt="" class="extra-img cam"> <p class="info-amenidad">{{inmueble.recamaras}}</p> </div>
+        <div class="col-3 extra-propertie ">  <img  alt="" class="extra-img ban"> <p class="info-amenidad">{{inmueble.banios}} </p>  </div>
+        <div class="col-3 extra-propertie ">  <img  alt="" class="extra-img car"> <p class="info-amenidad">{{inmueble.estacionamiento}} </p> </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>
+
+
+<!-- ------------------------- Barra de navegacion ------------------------- -->
+  <ion-tabs class="navigationBar">
+
+    <ion-tab-bar slot="bottom" class="cont-navigation">
+
+      <ion-tab-button routerLink="/inicio">
+        <i class="fas fa-home-lg"></i>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/client-list">
+        <i class="fas fa-user-friends"></i>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/sales-funnel">
+        <i class="fas fa-filter"></i>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/calendar">
+        <i class="fas fa-calendar-alt"></i>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+
+  </ion-tabs>
+<!-- ----------------------------------------------------------------------- -->

@@ -1,0 +1,61 @@
+<!-- ----------------------------- Encabezado ------------------------------ -->
+  <app-header titulo="Lista de clientes"></app-header>
+<!-- ----------------------------------------------------------------------- -->
+
+<!-- -------------------------- Busqueda avanzada -------------------------- -->
+  <div class="col-12 text-center" style="    max-height: 90px;background-color: #fff; color: black; padding: 0 60px;">
+    <h5 class="find_advance mb-2"  routerLink="/search-client"><i class="far fa-search"> </i>&nbsp; Búsqueda avanzada</h5>
+    <p class="m-0 info-find text-center">Da click para realizar una busqueda avanzada.</p>
+  </div>
+<!-- ----------------------------------------------------------------------- -->
+
+<!-- ------------------ Contenido de listado de clientes ------------------- -->
+  <ion-content>
+
+    <app-clients [clientList]="clientList"></app-clients>
+
+  </ion-content>
+<!-- ----------------------------------------------------------------------- -->
+
+<!-- ----------------------- boton agregar cliente ----------------------- -->
+  <div class="btn-add-client">
+    <p class="find_advance_ " id="open-modal-client-add-modal-list" expand="block" >
+      <i class="fas fa-plus"></i>
+    </p>
+  </div>
+<!-- ----------------------------------------------------------------------- -->
+
+
+<!-- ----------------------- Modal agregar cliente ----------------------- -->
+
+  <app-add-client-list></app-add-client-list>
+
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+<!-- ------------------------- Barra de navegacion ------------------------- -->
+  <ion-tabs class="navigationBar">
+
+    <ion-tab-bar slot="bottom" class="cont-navigation">
+
+      <ion-tab-button routerLink="/inicio">
+        <i class="fas fa-home-lg"></i>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/client-list">
+        <i class="fas fa-user-friends"></i>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/sales-funnel">
+        <i class="fas fa-filter"></i>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/calendar">
+        <i class="fas fa-calendar-alt"></i>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+
+  </ion-tabs>
+<!-- ----------------------------------------------------------------------- -->

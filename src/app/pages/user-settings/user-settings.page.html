@@ -1,0 +1,97 @@
+<app-header titulo="Configuraciones"></app-header>
+
+<!-- ------------------ Contenido de listado de clientes ------------------- -->
+<ion-content>
+
+  <div class="col-12 text-center h-100" style="background-color: #fff; color: black">
+
+    <ion-list >
+
+      <ion-item  class="background-color" >
+        <div class="col-4 h-100" style="padding:28px 0px 28px 1px;">
+          <div class="img-user" style="background-image: url({{user_Photo}});" >
+
+          </div>
+        </div>
+        <div class="col-8">
+          <p class="m-0" style="color: rgb(0, 0, 0); font-weight: 700;">Nombre(s) Apellido(s)</p>
+          <p class="m-0" style="color: rgb(129, 129, 129);">{{asesor_name}} </p>
+        </div>
+
+      </ion-item>
+
+      <ion-item  class="background-color" >
+        <div class="col-12 p-0">
+          <p class="m-0 w-100" style="color: rgb(0, 0, 0); font-weight: 700;">Correo electrònico</p>
+          <p class="m-0 w-100" style="color: rgb(129, 129, 129);">{{asesor_email}} </p>
+        </div>
+
+
+      </ion-item>
+
+      <ion-item  class="background-color" >
+        <div class="col-12 p-0">
+          <p class="m-0" style="color: rgb(0, 0, 0); font-weight: 700;">Teléfono</p>
+          <p class="m-0" style="color: rgb(129, 129, 129);">{{asesor_phone}} </p>
+
+        </div>
+
+      </ion-item>
+
+      <ion-item  *ngIf=" bio === '1' " (click)="bioOff()"  class="background-color" >
+        <label class="d-flex finger-label" >
+            <p class="m-0" style="color: rgb(0, 0, 0); font-weight: 700;">Acceder con huella</p>
+            <span class="action d-flex">
+              <input type="checkbox" name="" id="" *ngIf=" bio === '1' " checked><i></i>
+            </span>
+          </label>
+      </ion-item>
+
+      <ion-item  *ngIf=" bio === '0' " (click)="bioOn()"  class="background-color" >
+        <label class="d-flex finger-label" >
+            <p class="m-0" style="color: rgb(0, 0, 0); font-weight: 700;">Acceder con huella</p>
+            <span class="action d-flex">
+              <input type="checkbox" name="" id=""><i></i>
+            </span>
+          </label>
+      </ion-item>
+
+    </ion-list>
+
+
+
+  </div>
+  <div class="col-12 " style="position: absolute; bottom: 20px; left: 0;">
+    <p class="btn-logout " (click)="logout()" >
+    Cerrar sesión
+    </p>
+  </div>
+</ion-content>
+<!-- ----------------------------------------------------------------------- -->
+
+
+<!-- ------------------------- Barra de navegacion ------------------------- -->
+<ion-tabs class="navigationBar">
+
+  <ion-tab-bar slot="bottom" class="cont-navigation">
+
+    <ion-tab-button routerLink="/inicio">
+      <i class="fas fa-home-lg"></i>
+    </ion-tab-button>
+
+    <ion-tab-button routerLink="/client-list">
+      <i class="fas fa-user-friends"></i>
+    </ion-tab-button>
+
+    <ion-tab-button routerLink="/sales-funnel">
+      <i class="fas fa-filter"></i>
+    </ion-tab-button>
+
+    <ion-tab-button routerLink="/calendar">
+      <i class="fas fa-calendar-alt"></i>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs>
+<!-- ----------------------------------------------------------------------- -->

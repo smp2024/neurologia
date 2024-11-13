@@ -1,0 +1,17 @@
+.btn-entrar {
+  height: 40px;
+  width: 100%;
+  color: #fff;
+  padding: 0;
+  margin: 0 !important;
+  font-size: 20px;
+  background-color: #0e383b;
+  color: #fff;
+}
+
+ion-input.ng-invalid {
+  border-color: red;
+}
+ion-select.ng-invalid {
+  border-color: red;
+}

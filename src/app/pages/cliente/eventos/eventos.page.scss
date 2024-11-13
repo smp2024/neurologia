@@ -1,0 +1,171 @@
+.back_color {
+  color: #FFF;
+}
+
+.card-date{
+  padding: 15px;
+  background-color: #258F8D;
+  border-radius: 8px 0px 0px 8px;
+  color: #fff;
+}
+h3{
+  font-weight: bold;
+  color: #000;
+}
+.cont-card-event {
+  border-radius: 8px;
+  box-shadow: 2px 4px 16px 0px rgb(0 0 0 / 25%);
+}
+.menu {
+  font-size: 30px;
+  margin-top: 10px;
+  color: #258F8D;
+}
+p {
+  margin: 0;
+}
+.card-info {
+  padding: 10px;
+}
+
+/* ---------------------------------- modal --------------------------------- */
+
+ion-content {
+  background: white;
+  border-radius: 25px;
+}
+.sc-ion-alert-md-h {
+  --background: #fff;
+  --ion-background-color: rgb(255 255 255 / 0%) !important;
+}
+.label_ {
+  width: 100%;
+  text-align: start;
+}
+
+.btn-add-client {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  transition: all 300ms ease 0ms;
+  box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+  z-index: 99;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.find_advance_ {
+  background-color: #1e5b5a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 0;
+  height: 100%;
+  border-radius: 50%;
+  font-size: calc(2rem - 1vw);
+  width: 100%;
+}
+.btn-add {
+  color: #fff;
+  background-color: #1e5b5a;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* ----------------------------- modal settings ----------------------------- */
+
+.modal-settings {
+  position: fixed;
+  z-index: 999;
+  background-color: rgb(255 255 255 / 0.5);
+  height: 100%;
+  width: 100%;
+
+}
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+/* ----------------------------- modal add event ---------------------------- */
+
+
+ion-buttons {
+  border-radius: 5px;
+}
+
+ion-label{
+  font-size: 13px;
+  margin-top: 10px;
+}
+ion-select {
+  padding: 0!important;
+  border: solid 1px #000;
+  border-radius: 5px;
+  width: 100%;
+  height: 32px;
+}
+.ios ion-modal ion-toolbar  {
+  padding-top: 0px !important;
+}
+.color-back {
+  font-size: 25px;
+  color: #fff;
+}
+.cont_input_ {
+  padding: 5px;
+}
+.search_ {
+  text-align: left;
+  border-radius: 7px !important;
+  height: 32px;
+  border: solid 1px black;
+}
+.label_ {
+  width: 100%;
+  text-align: start;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* ---------------------------------- modal view settings event--------------------------------- */
+
+
+ion-modal#example-modal {
+  --width: fit-content;
+  --min-width: 250px;
+  --height: fit-content;
+  --border-radius: 6px;
+  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+}
+
+ion-modal#example-modal h1 {
+  margin: 20px 20px 10px 20px;
+}
+
+ion-modal#example-modal ion-icon {
+  margin-right: 6px;
+
+  width: 48px;
+  height: 48px;
+
+  padding: 4px 0;
+
+  color: #aaaaaa;
+}
+
+ion-modal#example-modal .wrapper {
+  margin-bottom: 10px;
+  width: 350px;
+}

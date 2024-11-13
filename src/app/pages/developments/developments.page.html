@@ -1,0 +1,70 @@
+<app-header titulo="Desarrollos"></app-header>
+
+
+<!-- -------------------------- Busqueda avanzada -------------------------- -->
+<!-- <div class="col-12 text-center" style="    max-height: 70px; background-color: #fff; color: black; padding: 0 40px; ">
+  <h5 class="find_advance"  routerLink="/search-client"><i class="far fa-search" style="margin-right: 15px;"></i>  Búsqueda avanzada</h5>
+</div> -->
+<!-- ----------------------------------------------------------------------- -->
+
+
+
+<ion-content>
+
+  <div id="Developments" class="col-12" style="background-color: #fff; color: black; padding: 10px 20px;" >
+
+    <div class="d-flex justify-content-center " style="margin-top: 10px;" >
+      <div class="row  w-100">
+        <div class="col-12 col-md-6 card-date text-center mt-2 cont-card-event" *ngFor="let desarrollo of developments" (click)="verDeatelle(desarrollo.id)">
+
+          <div class=" card-image" style="background-image: url({{desarrollo.portada}});" >
+            <div class="">
+              <p class="status">{{desarrollo.etapa_desarrollo}}</p>
+            </div>
+          </div>
+          <div class=" card-name">
+            <p style="font-size: calc(0.9rem + 0.8vw);">{{desarrollo.desarrollo}}</p>
+          </div>
+          <div class=" card-price">
+            <p>Desde {{desarrollo.desde}}</p>
+          </div>
+          <div class="row card-amenidad mt-2">
+            <div class="col-3 extra-propertie ">  <img  alt="" class="extra-img full"><p class="info-amenidad">{{desarrollo.metroscubicos}}</p> </div>
+            <div class="col-3 extra-propertie ">  <img  alt="" class="extra-img cam"> <p class="info-amenidad">{{desarrollo.recamaras}} </p> </div>
+            <div class="col-3 extra-propertie ">  <img  alt="" class="extra-img ban"> <p class="info-amenidad">{{desarrollo.banios}}</p>  </div>
+            <div class="col-3 extra-propertie ">  <img  alt="" class="extra-img car"> <p class="info-amenidad">{{desarrollo.estacionamiento}} </p> </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ion-content>
+
+
+<!-- ------------------------- Barra de navegacion ------------------------- -->
+  <ion-tabs class="navigationBar">
+
+    <ion-tab-bar slot="bottom" class="cont-navigation">
+
+      <ion-tab-button routerLink="/inicio">
+        <i class="fas fa-home-lg"></i>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/client-list">
+        <i class="fas fa-user-friends"></i>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/sales-funnel">
+        <i class="fas fa-filter"></i>
+      </ion-tab-button>
+
+      <ion-tab-button routerLink="/calendar">
+        <i class="fas fa-calendar-alt"></i>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+
+  </ion-tabs>
+<!-- ----------------------------------------------------------------------- -->

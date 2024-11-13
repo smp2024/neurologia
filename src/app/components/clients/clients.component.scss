@@ -1,0 +1,69 @@
+
+/* ------------------------------- card client ------------------------------ */
+
+.cont-card-event {
+  border-bottom: solid 1px #000;
+}
+.card-date{
+  width: 5px;
+  background-color: #258F8D;
+  border-radius: 8px 0px 0px 8px;
+  color: #fff;
+}
+
+.card-info p{
+  margin: 0;
+}
+.status-p {
+  height: 16px;
+  span {
+    padding: 0;
+    font-size: 10px;
+    width: 100%;
+    height: 100%;
+    float: right;
+    background: #29c3e3;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+}
+.date-card {
+  font-size: 15px;
+  color: rgb(143, 143, 143);
+}
+.card-name-client {
+  color: #000000;
+  font-weight: 700;
+}
+.datos{
+  color: #999898;
+  font-size: 12px;
+}
+
+.t_1 {
+  background: #29c3e3 !important;
+  }
+  .t_2 {
+    background: #FDB600 !important;
+  }
+  .t_3 {
+    background: #FF6B17 !important;
+  }
+  .t_4 {
+    background: #A8A8A8 !important;
+  }
+  .t_5 {
+    background: #BF9000 !important;
+  }
+  .t_6 {
+    background: #7F6000 !important;
+  }
+  .t_7 {
+    background: #000000 !important;
+  }
+/* -------------------------------------------------------------------------- */

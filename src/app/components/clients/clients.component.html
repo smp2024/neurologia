@@ -1,0 +1,21 @@
+<div class="row " style="padding: 0px 40px; padding-top: 15px !important;">
+  <div class="col-12 cont-card-event d-flex p-0 "  *ngFor="let cliente of clientList"  (click)="verClient(cliente.id, cliente.nombre)">
+    <div class="card-info w-100 mb-1">
+      <div class="row w-100" style="margin: auto;">
+        <div class="col-10 p-1 pr-2">
+          <p class="card-name-client"> {{cliente.nombre}}</p>
+          <p class="datos"> {{cliente.desarollo}}</p>
+          <p class="datos"> {{cliente.telefono1}}</p>
+        </div>
+        <div class="col-2 d-flex justify-content-center align-items-center pl-3 pr-1">
+          <div class="content w-100">
+            <p class=" status-p mt-1"><span>OP</span></p>
+            <p *ngIf=" cliente.status === 'Oportuno' " class=" et_ t_1">OP</p>
+            <p class=" status-p mt-1"><span class=" t_3" >AC</span></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="row">
+  <ion-modal trigger="open-modal-client-add-modal-list" [initialBreakpoint]="0.75" [breakpoints]="[0, 0.25, 0.5, 0.75]">
+    <ng-template>
+      <form class="custom-form h-100" (ngSubmit)="addClients(fAddClient)" #fAddClient="ngForm">
+      <ion-content class="ion-padding">
+
+        <ion-list>
+
+          <div class="row cont_input_  pt-3" style="background-color: #fff; color: black">
+            <p class="m-0 font-weight-bold w-100 text-center" style="color: #1e5b5a; margin-bottom: 15px !important; font-size: 18px; font-weight: 700;">Añadir cliente</p>
+            <div class="col-12 text-center mb-2" >
+              <div class="input-group">
+                <ion-label class="label_">Nombre del cliente:</ion-label>
+                <ion-input [(ngModel)]="clientAdd.nombre" name="nombre" required class="search_" type="text" placeholder="nombre y apellidos"></ion-input>
+              </div>
+            </div>
+            <div class="col-12 text-center mb-2" >
+              <div class="input-group">
+                <ion-label class="label_">Correo electrónico:</ion-label>
+                <ion-input [(ngModel)]="clientAdd.email" name="email" required class="search_" type="emial" placeholder="ejemplo@example.com"></ion-input>
+              </div>
+            </div>
+            <div class="col-6 text-center mb-2" >
+              <div class="input-group">
+                <ion-label class="label_">Teléfono:</ion-label>
+                <ion-input [(ngModel)]="clientAdd.telefono" name="telefono" required class="search_" type="number" placeholder="0000000"></ion-input>
+              </div>
+            </div>
+
+            <div class="col-6 text-center mb-2" >
+              <div class="input-group">
+                <ion-label class="label_">Forma de contacto:</ion-label>
+                <ion-input [(ngModel)]="clientAdd.contacto" name="contacto" required  class="search_" type="text" placeholder="Mercado libre"></ion-input>
+              </div>
+            </div>
+
+            <div class="col-12 text-center mb-2" >
+              <div class="input-group">
+                <ion-label>Desarrollo:</ion-label>
+                <ion-select [(ngModel)]="clientAdd.desarrollo" ok-text="Seleccionar" required placeholder="Seleccionar desarrollo" cancel-text="Cancelar" name="desarrollo" (ionChange)="onDesarrolloChange()">
+                <ng-container *ngFor="let article of desarrollos">
+                    <ion-select-option  value="{{article.id}}">{{article.desarrollo}}</ion-select-option>
+                </ng-container>
+                </ion-select>
+              </div>
+            </div>
+
+
+            <div class="col-12 text-center mb-2" >
+              <div class="input-group">
+                <ion-label class="label_">Inmueble</ion-label>
+                <ion-select [(ngModel)]="clientAdd.inmueble" name="inmueble" ok-text="Seleccionar" cancel-text="Cancelar"  placeholder="Seleccionar inmueble"  style="padding: 0;"  [disabled]="inmuebleDisabled">
+                  <ion-select-option value="apples">Roma Sur</ion-select-option>
+                  <ion-select-option value="oranges">Roma Norte</ion-select-option>
+                  <ion-select-option value="bananas">Arboledas</ion-select-option>
+                </ion-select>
+              </div>
+            </div>
+
+            <div class="col-12 btn-add">
+              <ion-buttons style="height: 45px; width: 80%; background: #1e5b5a;" >
+                <ion-button type="submit" [strong]="true" class="color-back w-100" style=" font-size: 15px;">Crear cliente</ion-button>
+                <!-- <button type="submit" class="btn btn-entrar mt-3" >Entrar</button> -->
+              </ion-buttons>
+            </div>
+
+            <div class="col-12 btn-add" style="margin-top: 20px; background: #fff !important;">
+              <ion-buttons style="height: 45px; width: 80%; background: #FFF;" >
+                <ion-button  (click)="cancel()" [strong]="true" class=" w-100" style=" font-size: 15px; color:  #1E5B5A;     text-decoration: underline;">Regresar</ion-button>
+              </ion-buttons>
+            </div>
+          </div>
+
+        </ion-list>
+
+      </ion-content>
+      </form>
+    </ng-template>
+  </ion-modal>
+</div>
