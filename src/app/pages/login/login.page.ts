@@ -60,15 +60,15 @@ export class LoginPage implements OnInit {
 
     const valido = await this.usuarioService.login(this.loginUser.email,this.loginUser.password);
 
-    if (valido['Ok']) {
+    if (valido['flag']) {
       this.naveCtrl.navigateRoot('inicio', {animated: true});
       this.mensaje = valido['mensaje'];
       this.saveUserEmail(this.loginUser.email);
-      console.log(valido['mensaje']);
-    } else if (!valido['Ok']){
+      // console.log(valido['mensaje']);
+    } else if (!valido['flag']){
       this.error();
       this.mensaje = valido['mensaje'];
-      console.log(valido['mensaje']);
+      // console.log(valido['mensaje']);
     }
 
   }

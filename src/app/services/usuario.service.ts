@@ -48,27 +48,22 @@ export class UsuarioService {
 
     login(email: string, password: string) {
       const data = { email, password };
+      const dataUser = {
+        email: data.email,
+        password: data.password,
+        api_key: 'SMP'
+      };
 
       return new Promise((resolve) => {
         this.http
-          /*.post(`http://localhost/adryo-beta/users/login_app`, data)*/
-          .post(`http://127.0.0.1:8000/login`, data)
-
+          .post(`http://127.0.0.1:8000/api/login`, dataUser)
           .subscribe((resp) => {
-            console.log(resp);
-            if (resp['Ok']) {
-              this.infoAdvi(resp['user_id']);
-              //this.saveUserEmail(email);
-              this.savePassword(password);
-              this.saveUserId(resp['user_id']);
-              this.saveUserFoto(resp['cuenta_logo']);
-              this.saveUserCuenta(resp['cuenta_id']);
-              this.saveUserBiometric();
+            console.log(resp['flag']);
+            if (resp['flag'] === true) {
               this.message = resp['mensaje'];
               resolve(resp);
             }
-            if (!resp['Ok']) {
-              console.log(resp['mensaje']);
+            if (!resp['flag']) {
               resolve(resp);
               this.message = resp['mensaje'];
             }
