@@ -1,191 +1,42 @@
+
 <ion-content>
+<ion-row >
+  <!-- Contenido del menú lateral -->
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-  <div id="Principal" class="row">
-    <!-- -------------------------- Header navegacion --------------------------- -->
-      <div class="col-12 cont_user">
-
-        <div id="carouselExampleIndicators" class="carousel slide h-100" data-ride="carousel">
-
-          <div class="carousel-inner h-100">
-            <div class="carousel-item active h-100">
-              <div class="row b_c body avatar">
-
-                <div class="img-user" style="background-image: url('https://adryo.com.mx/{{avatar}}');" >
-
-                </div>
-
-                <div class="col-12 p-0 d-flex justify-content-center welcome">
-                  <div class="row w-100">
-                    <p class="p-0 m-0 p_wel">Bienvenido</p>
-                  </div>
-                </div>
-
-                <div class="col-12 p-0 d-flex justify-content-center user">
-                  <div class="row w-100">
-                    <h4 class="p-0 p_use">{{asesor_name}}</h4>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-            <div class="carousel-item h-100">
-              <div class="row b_c p-0 ">
-
-                <div class="col-12 p-0 d-flex justify-content-center next-event">
-
-                    <i class="fas fa-calendar-alt"></i>
-                    <p class="p-0 m-0 p-next">Próximos eventos</p>
-
-                </div>
-
-                <div class="col-12 justify-content-center next-event_" style="height: 215px; overflow-y: auto;">
-
-                  <div class="row event_ mb-2 " style="background-color:#c0f0ef; min-height: 60px;" *ngFor="let event of events">
-                    <div class="col-6 cont-event">{{event.tipo_evento}} </div>
-                    <div class="col-6 cont-event">{{event.fecha}}</div>
-                    <div class="col-6 cont-event">{{event.cliente}}</div>
-                    <div class="col-6 cont-event">{{event.direccion}}</div>
-                  </div>
-
-                </div>
-
-            </div>
-            </div>
-            <div class="carousel-item h-100">
-              <div class="row b_c p-0 ">
-
-                <div class="col-12 p-0 d-flex justify-content-center meta">
-
-                    <i class="fad fa-bullseye-arrow"></i>
-                    <p class="p-0 m-0 p-meta">Metas de {{nombreMes}}</p>
-
-                </div>
-
-                <div class="col-12 justify-content-center meta">
-                  <h1 class=" w-100 text-end" style="color: rgb(30,91,90); margin-top: 55px;">{{adviser.ventas_monto_meta}}M</h1>
-                  <div class="row w-100 m-0" style="background: rgb(30,91,90); background: linear-gradient(90deg, rgba(30,91,90,1) 0%, rgba(105,219,217,1) 100%); height: 25px;">
-
-                  </div>
-                  <h1 class=" w-100 text-end" style="color: rgb(30,91,90); ">{{adviser.ventas_monto_vendidas}}M</h1>
-                  <h5 class=" w-100 text-end" style="color: rgb(30,91,90); ">Unidades vendidas: {{adviser.ventas_monto_unidades}}</h5>
-
-              </div>
-
-              </div>
-            </div>
-          </div>
-
-
-          <div class="row footer" >
-            <div class="col-12 h-100 p-0 d-flex justify-content-center">
-              <div class="card_b b_c"></div>
-              <div class="card-bottom b_c">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    <!-- ----------------------------------------------------------------------- -->
-
-    <!-- ----------------------- Seccion agregar cliente ----------------------- -->
-
-      <div class="col-12 add-client">
-        <p class="find_advance " id="open-modal-client-add-modal" expand="block"  style="color: #fff !important; padding: 0;">
-          <i class="fas fa-plus-circle" style="margin-right: 10px;"></i>
-          <span style="padding-top: 2px;"> Agregar Cliente</span>
-        </p>
-      </div>
-
-      <!-- ----------------------- Modal agregar cliente ----------------------- -->
-
-      <app-add-client></app-add-client>
-
-    <!-- ----------------------------------------------------------------------- -->
-
-
-    <!-- -------------------- Seccion mosaico de navegacion -------------------- -->
-      <div class="col-12 cont_nav">
-        <div class="row " style="height: 100%;">
-
-
-          <div class="col-4 section_ mt-5" style="height: 98px; width: 106px;" >
-            <div class="btn-nav h-100" routerLink="/client-list">
-
-              <i class="fas fa-user-friends"></i>
-              <p> Lista de clientes</p>
-            </div>
-          </div>
-
-          <div class="col-4 section_ mt-5" style="height: 98px; width: 106px;">
-
-            <div class="btn-nav h-100" routerLink="/sales-funnel">
-
-              <i class="fas fa-filter"></i>
-              <p>Embudo de ventas</p>
-            </div>
-          </div>
-
-
-          <div class="col-4 section_ mt-5" style="height: 98px; width: 106px;">
-            <div class="btn-nav h-100" routerLink="/calendar">
-              <div>
-                <i class="fas fa-calendar-alt"></i>
-              </div>
-
-              <p>Calendario</p>
-            </div>
-          </div>
-
-          <div class="col-4 section_ mt-5" style="height: 98px; width: 106px;">
-            <div class="btn-nav h-100" routerLink="/properties">
-
-              <i class="fas fa-home-lg"></i>
-              <p>Propiedades</p>
-            </div>
-          </div>
-          <div class="col-4 section_ mt-5" style="height: 98px; width: 106px;">
-            <div class="btn-nav h-100" routerLink="/developments">
-
-              <i class="fas fa-city"></i>
-              <p>Desarrollos</p>
-            </div>
-          </div>
-          <div class="col-4 section_ mt-5" style="height: 98px; width: 106px;">
-            <div class="btn-nav h-100" routerLink="/user-settings">
-
-              <i class="far fa-cog"></i>
-              <p>Configuración</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    <!-- ----------------------------------------------------------------------- -->
-
-  </div>
-
-
-  <!-- ------------------------------- alertas ------------------------------- -->
-    <div id="response" class="response d-none">
-      <div class="row justify-content-center align-items-center w-100 h-100">
-        <div class="col-6">
-          <div class="card">
-            <div class="card-body">
-              <p class="card-text text-center" id="icono"></p>
-              <p class="card-text text-center" id="respuesta" ></p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <!-- Imagen de perfil o logo -->
+    <div class="profile-container">
+      <ion-avatar>
+        <img src="assets/media/map.png" alt="Logo de la Empresa">
+      </ion-avatar>
     </div>
-  <!-- ----------------------------------------------------------------------- -->
 
+    <!-- Lista de secciones -->
+    <ion-list>
+      <ion-item button routerLink="/home">
+        <ion-label>Home</ion-label>
+      </ion-item>
+      <ion-item button routerLink="/categorias">
+        <ion-label>Categorías</ion-label>
+      </ion-item>
+      <ion-item button routerLink="/clientes">
+        <ion-label>Clientes</ion-label>
+      </ion-item>
+    </ion-list>
 
+    <!-- Footer con icono de configuración -->
+    <ion-footer>
+      <ion-toolbar>
+        <ion-buttons slot="end">
+          <ion-button routerLink="/configuracion">
+            <ion-icon name="settings-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-footer>
+</ion-row>
 
-</ion-content>
