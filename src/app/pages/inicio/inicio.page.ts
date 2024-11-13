@@ -62,25 +62,28 @@ export class InicioPage {
 
 
   async us() {
-    const storage = await this.storage.create();
-    const id = await this.storage.get('user_id');
-    const foto = await this.storage.get('cuenta_logo');
-    const asesor_name = await this.storage.get('user_name');
-    this.asesor_name = asesor_name;
+    // const storage = await this.storage.create();
+    // const id = await this.storage.get('user_id');
+    // const foto = await this.storage.get('cuenta_logo');
+    // const asesor_name = await this.storage.get('user_name');
+    // this.asesor_name = asesor_name;
 
-    this.avatar = foto;
-    const meses = [
-      'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
-      'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'
-    ];
-    const fechaActual = new Date();
-    const nombreMes = meses[fechaActual.getMonth()];
-    this.nombreMes = nombreMes;
+    // this.avatar = foto;
+    // const meses = [
+    //   'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+    //   'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'
+    // ];
+    // const fechaActual = new Date();
+    // const nombreMes = meses[fechaActual.getMonth()];
+    // this.nombreMes = nombreMes;
 
-     
-    
+    // this.usuarioService.getUserData(id).subscribe(resp => {
+    //   this.adviser = resp[0];
+    //   this.events = resp[0].events;
+
+    // });
     // eslint-disable-next-line @typescript-eslint/naming-convention
-    
+    // this.us2();
   }
   async us2() {
     const storage = await this.storage.create();

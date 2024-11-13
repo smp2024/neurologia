@@ -1,3 +1,6 @@
+h1 {
+  color: #000 !important;
+}
 .profile-container {
   text-align: center;
   margin: 20px 0;
@@ -6,31 +9,14 @@
 ion-avatar {
   width: 80px;
   height: 80px;
-  margin: 0 auto;
 }
 
 ion-list {
   margin-top: 20px;
 }
 
-ion-item {
-  padding: 10px;
-}
-
 ion-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-
-ion-toolbar {
-  text-align: center;
-}
-
-ion-menu {
-  --width: 250px;  /* Ancho del menú */
-}
-
-ion-content#main-content {
-  --margin-start: 250px;  /* Desplazamiento del contenido para que se vea al abrir el menú */
 }
