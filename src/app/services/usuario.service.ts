@@ -51,7 +51,9 @@ export class UsuarioService {
 
       return new Promise((resolve) => {
         this.http
-          .post(`http://localhost/adryo-beta/users/login_app`, data)
+          /*.post(`http://localhost/adryo-beta/users/login_app`, data)*/
+          .post(`http://127.0.0.1:8000/login`, data)
+
           .subscribe((resp) => {
             console.log(resp);
             if (resp['Ok']) {
